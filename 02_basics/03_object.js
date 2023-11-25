@@ -15,7 +15,7 @@ const singleton = Object.create({
 
 
 // object literals
-let mysbl=Symbol(key1)
+let mysbl=Symbol("key1")
 const jsUser={
     name:"akash",
     "full name":"akash sharma",
@@ -23,3 +23,14 @@ const jsUser={
     course:"Btech",
     [mysbl]:"mykey"
 }
+console.log(jsUser)
+console.log(jsUser.age)
+console.log(jsUser["full name"])
+console.log(["mysbl"])
+
+// change
+jsUser.course="Mtech"
+
+Object.freeze(jsUser)
+
+jsUser.course="Mtech"
