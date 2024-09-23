@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="content"></h1>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+    <script >
+       
+        const h1=document.querySelector('h1');
+        const startBtn=document.querySelector('.start');
+        const stopBtn=document.querySelector('.stop');
+       let setIntervalHandler;
+       function setDate(name){
+            
+            h1.textContent=`Hello ${name}, ${Date.now()}`;
+        }
+        startBtn.addEventListener('click',function(){
+           setIntervalHandler = setInterval(setDate, 1000,"akash")
+       console.log("set");
+       
+              
+        })
+        stopBtn.addEventListener('click',function(){
+            clearInterval(setIntervalHandler);
+            h1.textContent='Count stopped';
+            console.log('stop');
+            
+        })
+
+    
+    </script>
+</body>
+</html>

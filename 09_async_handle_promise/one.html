@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="content">Learning JS by Chai Aur code </h1>
+    <button class="btn">Still Learning</button>
+    <script >
+        const btn=document.querySelector('.btn')
+        const content=document.querySelector('.content')
+        function setText(){
+            content.textContent='I have learned JS by Chai Aur code'
+        }
+       const notLearnTimeOut= setTimeout(setText,5000);
+        btn.addEventListener('click',function(){
+           clearTimeout(notLearnTimeOut)
+           console.log("stooped out");
+           
+
+        })
+    </script>
+</body>
+</html>
